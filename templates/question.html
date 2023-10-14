@@ -1,0 +1,31 @@
+<html>
+
+<head>
+  <link rel="stylesheet" type="text/css" href="{{ url_for('static',filename='styles/main.css') }}">
+  <title>Communication Styles</title>
+</head>
+
+<body>
+  <div>
+    <h1>What is your communication <span class="fancy"> style</span>?</h1>
+    <h2>Select an answer that relates more to you.</h2>
+    <section class="answers">
+      <form action="{{ url_for('question', number=number) }}" method="POST" id="form">
+        {% for answer in answers.keys() %} <br>
+        <input type="radio" id="answer" name="answer" value="{{ answer }}" onchange="this.form.submit()">{{ answer
+        }}</input>
+
+        {% endfor %}
+
+        <span class="checkmark"></span>
+
+      </form>
+
+
+    </section>
+
+
+  </div>
+</body>
+
+</html>
