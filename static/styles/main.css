@@ -1,32 +1,116 @@
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;700&display=swap');
 
-body {
-    font-family: 'Poppins', sans-serif;
-    background: #000405;
-    min-height: 25vh;
-    color: #fff;
-    font-family: 'Work Sans', sans-serif;
-    font-weight: 50;
+.text-container {
+    background-color:rgb(43, 214, 180);
+    padding-top: 25px;
+    padding-bottom: 25px;
+    border-bottom-left-radius: 40%;
+    border-bottom-right-radius: 40%;
+  
+    
+}
+.top-container {
+    background-color: black;
+    border-bottom-left-radius: 30%;
+    border-bottom-right-radius: 30%;
+    
+   
+}
+nav {
+    margin: 27px auto 0;
+    position: relative;
+   width: fit-content;
+    height: 50px;
+    background-color: #000000;
+
+  
 }
 
-* {
+nav a {
+    line-height: 50px;
+    height: 100%;
+    font-size: 15px;
+    display: inline-block;
+    position: relative;
+    z-index: 1;
+    text-decoration: none;
+    text-transform: uppercase;
     text-align: center;
+    font-family: 'Poppins', sans-serif;
+    cursor: pointer;
     color: white;
+    font-weight: bolder;
+    
+}
+
+nav .animation {
+    position: absolute;
+    height: 100%;
+    top: 0;
+    z-index: 0;
+    transition: all .5s ease 0s;
+    border-radius: 0px;
+   
+}
+
+a:nth-child(1) {
+    width: 150px;
+    
+}
+
+a:nth-child(2) {
+    width: 150px;
+    
+}
+
+a:nth-child(1):hover {
+    color: rgb(43, 214, 180);
+    font-weight: bolder;
+    
+}
+a:nth-child(2):hover {
+    color: rgb(43, 214, 180);
+    font-weight: bolder;
+} 
+
+body {
+    background: rgb(44, 62, 80) ;
+    position:relative;
 }
 
 h1 {
     padding-top: 2%;
-    font-size: 100px;
     text-transform: uppercase;
-    text-align: center;
     line-height: 1;
-}
+    font-family: 'Poppins', sans-serif;
+    margin: 40px 0 40px;
+    text-align:left;
+    font-size: 30px;
+    color: #ecf0f1;
+    text-align: center;
+    color: white;
 
+}
 h2 {
+    font-family: 'Poppins', sans-serif;
     font-size: 25px;
     text-align: center;
     line-height: 1;
+    
 }
+h3 {
+    font-family: 'Poppins', sans-serif;
+    font-size: 15px;
+    text-align: center;
+    line-height: 1;
+    
+}
+
+
+span {
+    color: rgb(43, 214, 180);
+}
+
 
 
 .fancy {
@@ -47,8 +131,6 @@ h2 {
         background-position: 0em;
     }
 }
-
-
 .container .button {
     position: absolute;
     left: 30%;
@@ -59,9 +141,10 @@ h2 {
     color: #000000;
     font-size: 16px;
     cursor: pointer;
-    border-radius: 5px;
-    text-align: center;
-    padding: .75rem 1.65rem;
+    font-weight: bold;
+    font-family: 'Poppins', sans-serif;
+  /*  padding: .75rem 1.65rem; */
+    
 }
 
 
@@ -92,22 +175,79 @@ h2 {
 }
 
 section.answers {
+    font-size: 35px;
+    text-align: center;
 
-    padding-left: 35px;
-    margin-bottom: 12px;
+}
+
+input#answer {
+    height: 50px;
+    width:fit-content;
+    position: static;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    background-color: white;
+    font-family:'Poppins', sans-serif;
+    border-style: dotted;
+    margin-top: 15px;
+    
+
+}
+
+input[type="submit"] {
     cursor: pointer;
-    font-size: 50px;
     
 }
-input#answer{
-  height: 25px;
-  width: 25px;
-  position: static;
- 
+
+
+/*footer  {
+   padding-top: 35px;
+   padding-bottom: 30px;
+   background-color:grey;
+   position: fixed;
+   left: 0;
+   bottom: 0;
+   width: 100%;
+   border-top-left-radius: 25%;
+    border-top-right-radius: 25%;
+    border-bottom-left-radius: 25%;
+    border-bottom-right-radius: 25%;
+}*/
+
+.container {
+    margin-bottom: 10%;
 }
 
-input[type="radio"] {
-    cursor: pointer;
-    margin-right: 10px;
-}
+/*.site-footer p {
+    background-color: red;
+    height: 50px;
+    width: 100%;
+    text-align: center;
+    padding: 5px;
+}*/
 
+.footer {
+    position: static;
+   /* left: 0;
+    bottom: 0;
+    width: 100%; */
+    margin-top: 15%;
+    padding: 5px;
+    background-color: grey;
+    color: white;
+    text-align: center;
+    font-family: 'Poppins', sans-serif;
+    font-size: 16px;
+    font-weight: bold;
+ }
+
+ /*p {
+    position: fixed;
+    text-align: center;
+    bottom: 5px;
+    width: 100%;
+    font-family: 'Poppins', sans-serif;
+    font-size: 16px;
+    font-weight: bold;
+    color: white;
+}*/

@@ -1,11 +1,31 @@
-<html>
-    <head>
-        <link rel="stylesheet" type="text/css" href="{{ url_for('static',filename='styles/main.css') }}">
-        <title>Communication Styles</title>
-    </head>
-    <body>
-<h1>{{ style["Name"] }}</h1>
-<p>{{ style["Description"] }}</p>
-<p>{{ style["People"] }}</p>
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static',filename='styles/main.css') }}">
+    <title>Communication Styles</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+</head>
+
+<body>
+    
+        <header>
+            <div class="text-container">
+                <h2>Communication Style Finder</h2>
+            </div>
+        </header>
+
+    <main>
+        <h1>Your communication <span class="fancy"> style</span> can be described as:</h1>
+        <h1>{{ style["Name"] }}</h1>
+        <h2>{{ style["Description"] }}</h2>
+        <h3>{{ style["People"] }}</h3>
+        </div>
+    </main>
+    <footer class="footer">
+        <p>Copyright &copy; 2024 All Rights Reserved by
+            <span>Joanna Kmiec</span>.
+        </p>
+    </footer>
 </body>
 </html>

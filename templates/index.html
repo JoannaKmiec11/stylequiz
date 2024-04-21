@@ -1,19 +1,49 @@
-<html>
+<!DOCTYPE html>
+<html lang="en">
 
 <head>
     <link rel="stylesheet" type="text/css" href="{{ url_for('static',filename='styles/main.css') }}">
     <title>Communication Style</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
 </head>
-<body>
-    <div>
-        <h1>What is your communication <span class="fancy"> style</span>?</h1>
-        <h2>Find out today with this fun quiz</h2>
-    </div>
-    <div class="container">
-    <form action="{{ url_for('question') }}">
-        <button type="submit" class="button" value="Start">Let's go</button>
-    </form>
-</body>
 
+<body>
+    <header>
+    <div class="top-container">
+        <header>
+            <div class="text-container">
+                <h2>Communication Style Finder</h2>
+            </div>
+        </header>
+        <menu>
+            <!--  <div class="menu-container"> -->
+            <nav>
+                <a href="#">Home</a>
+                <a href="#">About</a>
+
+            </nav>
+            <!--  </div> -->
+            <div class="animation start-home"></div>
+        </menu>
+    </div>
+    <main>
+        <div class="main-container">
+            <div>
+                <h1>What is your communication <span class="fancy"> style</span>?</h1>
+                <h2>Find out today with this fun quiz</h2>
+            </div>
+            <div class="container">
+                <form action="{{ url_for('question') }}">
+                    <button type="submit" class="button" value="Start">Let's go</button>
+                </form>
+            </div>
+        </div>
+    </main>
+    <div class="footer">
+        <p>Copyright &copy; 2024 All Rights Reserved by
+            <span>Joanna Kmiec</span>.
+        </p>
+    </div>
+</body>
 
 </html>
