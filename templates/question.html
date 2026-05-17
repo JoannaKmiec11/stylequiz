@@ -2,42 +2,33 @@
 <html lang="en">
 
 <head>
-  <link rel="stylesheet" type="text/css" href="{{ url_for('static',filename='styles/main.css') }}">
-  <title>Communication Styles</title>
-  <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static',filename='styles/main.css') }}">
+    <title>Communication Styles</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
 </head>
 
 <body>
-  
     <header>
-      <div class="text-container">
-        <h2>Communication Style Finder</h2>
-      </div>
+        <div class="text-container">
+            <h2>Communication Style Finder</h2>
+        </div>
     </header>
 
+    <main>
+        <h1>What is your communication <span class="fancy"> style</span>?</h1>
+        <h2>Select <span class="fancy">an answer</span> that relates more to you.</h2>
+        <section class="answers">
+            <form action="{{ url_for('question', number=number) }}" method="POST">
+                {% for answer in answers.keys() %}
+                <input type="submit" id="answer" name="answer" value="{{ answer }}">
+                {% endfor %}
+            </form>
+        </section>
+    </main>
 
-  <main>
-    <h1>What is your communication <span class="fancy"> style</span>?</h1>
-    <h2>Select <span class="fancy"> an answer</span>that relates more to you.</h2>
-    <div class="container">
-      <section class="answers">
-        <form action="{{ url_for('question', number=number) }}" method="POST" id="form">
-          {% for answer in answers.keys() %} <br>
-          <input type="submit" id="answer" name="answer" value="{{ answer }}" onchange="this.form.submit()"></input>
-
-          {% endfor %}
-
-          <span class="checkmark"></span>
-
-        </form>
-      </section>
-    </div>
-  </main>
-  <footer>
-    <p>Copyright &copy; 2024 All Rights Reserved by
-      <span>Joanna Kmiec</span>.
-    </p>
-  </footer>
+    <footer>
+        <p>Copyright &copy; 2024 All Rights Reserved by <span>Joanna Kmiec</span>.</p>
+    </footer>
 </body>
 
 </html>

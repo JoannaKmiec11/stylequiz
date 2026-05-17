@@ -1,10 +1,11 @@
-from flask import Flask, session, request, render_template, url_for, redirect 
+import os
+from flask import Flask, session, request, render_template, url_for, redirect
 from seed_data.questions import questions
 from seed_data.styles import styles
 
 
 app = Flask(__name__)
-app.secret_key = b"7b16a1fcaa435d04e52a8b4ff5f874b96cebcd7aa3151855c0e7b202d622be6b-"
+app.secret_key = os.environ.get('SECRET_KEY')
 
 @app.route('/')
 def index():
@@ -42,10 +43,11 @@ def result():
 
     comm_styles = [max(results, key=lambda x:results[x])]
 
+    top_style = comm_styles[0]
     for key in results.keys():
-        if key == style:
-            continue 
-        if results[key] == results[style]:
+        if key == top_style:
+            continue
+        if results[key] == results[top_style]:
             comm_styles.append(key)
 
     if len(comm_styles) == 1:

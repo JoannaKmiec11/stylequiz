@@ -8,24 +8,23 @@
 </head>
 
 <body>
+    <header>
+        <div class="text-container">
+            <h2>Communication Style Finder</h2>
+        </div>
+    </header>
 
-        <header>
-            <div class="text-container">
-                <h2>Communication Style Finder</h2>
-            </div>
-        </header>
     <main>
         <h1>Your communication <span class="fancy"> style</span> can be described as:</h1>
         {% for style in styles %}
         <h1>{{ style["Name"] }}</h1>
         <h2>{{ style["Description"] }}</h2>
-        <h3>Famouse people with similar communication style: {{ style["People"] }}</h3>
         {% endfor %}
     </main>
-    <footer class="footer">
-        <p>Copyright &copy; 2024 All Rights Reserved by
-            <span>Joanna Kmiec</span>.
-        </p>
+
+    <footer>
+        <p>Copyright &copy; 2024 All Rights Reserved by <span>Joanna Kmiec</span>.</p>
     </footer>
-</body
-</html> 
+</body>
+
+</html>
