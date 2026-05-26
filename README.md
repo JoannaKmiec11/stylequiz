@@ -1,36 +1,51 @@
-# Communication Style Finder
+# StyleQuiz — Communication Style Assessment
 
-A web app that helps you identify your dominant communication style through a 40-question self-assessment.
+A digital version of the communication style assessment from Pierre Casse's *Teaching for the Cross-Cultural Mind* (SIETAR, 1981). Built because the original only existed as a PDF — useful in a workshop, unusable at scale.
 
-## About the Quiz
+## Why I built this
 
-The quiz is based on the work of **Pierre Casse** — *"Teaching for the Cross-Cultural Mind"* (Washington, DC, SIETAR, 1981).
+This project started as a real-life pain point. I first encountered Casse's framework in a communication workshop and found the assessment genuinely insightful — but completing it meant working through a printed PDF and tallying scores by hand. There was no way to share results, aggregate data across a team, or revisit your profile later.
 
-You are presented with 40 pairs of statements and asked to pick the one that feels most like you. There are no right or wrong answers — just choose as spontaneously as possible. At the end, your answers are tallied to reveal your dominant communication style across four types:
+I used it as an opportunity to build a proper digital version using Claude Code and Loveable.
 
-| Style | Focus | Key traits |
+## What it does
+
+40 pairs of statements. Choose the one that feels most like you. No right or wrong answers.
+
+The quiz identifies your dominant communication style across four types:
+
+| Style | Focus | Traits |
 |---|---|---|
-| **Action** | *What* — results & objectives | Direct, decisive, impatient, energetic |
-| **Process** | *How* — strategies & facts | Systematic, logical, cautious, detail-oriented |
-| **People** | *Who* — relationships & teamwork | Empathetic, warm, spontaneous, collaborative |
-| **Idea** | *Why* — concepts & innovation | Imaginative, charismatic, creative, big-picture |
+| **Action** | Results & objectives | Direct, decisive, energetic |
+| **Process** | Strategies & facts | Systematic, logical, detail-oriented |
+| **People** | Relationships & teamwork | Empathetic, warm, collaborative |
+| **Idea** | Concepts & innovation | Creative, visionary, imaginative |
 
-You may score equally across more than one style — in that case, all tied styles are shown as your result.
+Tied scores across multiple styles are shown together.
 
-## Running Locally
+## Where it's heading
+
+The individual quiz is the foundation. The bigger vision is a company-wide tool where:
+- Every team member takes the assessment
+- A manager dashboard shows team style distribution at a glance
+- Managers can set completion goals and send reminders
+- Aggregated data helps teams understand how they communicate collectively
+
+## How it was built
+
+- Built the initial version with a Flask + Python backend using Claude Code
+- Explored building the UI in Figma Make, then decided Loveable was the better fit for rapid prototyping and feature expansion
+- Moved to Loveable to build the dashboard and manager views, adjusting UI elements directly within the tool
+
+## Run it locally
 
 ```bash
-# Clone and set up
-git clone https://github.com/YoYoSuperStar/stylequiz.git
+git clone https://github.com/JoannaKmiec11/stylequiz.git
 cd stylequiz
 python -m venv venv
 venv\Scripts\activate
 pip install -r requirements.txt
-
-# Set your secret key
 echo SECRET_KEY=your-secret-key-here > .env
-
-# Start the app
 python app.py
 ```
 
